@@ -14,6 +14,7 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/MainView.fxml"));
 			Parent parent = loader.load();
+			
 			Scene mainScene = new Scene(parent);
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sample JavaFX application");
