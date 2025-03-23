@@ -70,7 +70,7 @@ public class SellerListController implements Initializable, DataChangeListener {
 	public void onBtNewAction(ActionEvent event) {
 		Seller s = new Seller();
 		Stage parentStage = Utils.currentStage(event);
-		// createDialogForm(s, "/gui/SellerForm.fxml", parentStage);
+		createDialogForm(s, "/gui/SellerForm.fxml", parentStage);
 	}
 
 	public void setSellerService(SellerService service) {
@@ -113,10 +113,10 @@ public class SellerListController implements Initializable, DataChangeListener {
 
 			SellerFormController controller = loader.getController();
 
-			//controller.setSeller(d);
-			//controller.setSellerService(new SellerService());
-			//controller.subscribeDataChangeListener(this);
-			//controller.updateFormData();
+			controller.setSeller(d);
+			controller.setSellerService(new SellerService());
+			controller.subscribeDataChangeListener(this);
+			controller.updateFormData();
 
 			Stage dialogStage = new Stage();
 			dialogStage.setTitle("Enter Seller data");
