@@ -31,3 +31,6 @@ build/
 nbbuild/
 dist/
 nbdist/
+
+# ECLIPSE
+.settings/
